@@ -1,6 +1,6 @@
 # 📊 Data Analyst | Data Visualization | Business Intelligence
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3C72,100:2A5298&height=220&section=header&text=prathin kumar%20|%20Data%20Analyst&fontSize=40&fontColor=ffffff"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3C72,100:2A5298&height=220&section=header&text=prathin-kumar%20|%20Data%20Analyst&fontSize=40&fontColor=ffffff"/>
 
 ## 👋 About Me
 
