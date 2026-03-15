@@ -89,4 +89,7 @@ Naukri: https://www.naukri.com/mnjuser/profile
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2A5298,100:1E3C72&height=120&section=footer"/>
+Feel free to reach out to discuss collaboration opportunities or just to say hi!
+
+
+---
