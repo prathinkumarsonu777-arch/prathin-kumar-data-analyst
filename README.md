@@ -67,7 +67,7 @@ Insights:
 
 Tools Used:
 
-Excel • Python • Power BI
+Excel • SQL • Power BI
 
 Insights:
 
