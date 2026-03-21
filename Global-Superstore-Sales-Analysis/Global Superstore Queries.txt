@@ -1,0 +1,89 @@
+1. Total Sales
+
+SELECT SUM(sales) AS total_sales
+FROM imposing-medium-489406-c1.Sales.Superstore
+
+
+
+
+2. Total Profit
+
+SELECT SUM(profit) AS total_profit
+FROM imposing-medium-489406-c1.Sales.Superstore
+
+
+
+
+3. Sales by Category
+
+ SELECT category,
+SUM(sales) AS total_sales
+FROM imposing-medium-489406-c1.Sales.Superstore
+GROUP BY category
+ORDER BY total_sales DESC
+	
+
+
+
+4. Top 10 Products
+
+SELECT product_name,
+SUM(sales) AS total_sales
+FROM imposing-medium-489406-c1.Sales.Superstore
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 10
+
+
+
+
+5. Sales by Region
+
+SELECT region,
+SUM(sales) AS total_sales
+FROM imposing-medium-489406-c1.Sales.Superstore
+GROUP BY region
+ORDER BY total_sales DESC
+
+
+
+
+6. Monthly Sales Trend
+
+SELECT
+year,
+month,
+SUM(sales) AS total_sales
+FROM imposing-medium-489406-c1.Sales.Superstore
+GROUP BY year, month
+ORDER BY year, month
+LIMIT 10
+
+	
+
+
+
+7. Most Profitable Category
+
+SELECT category,
+SUM(profit) AS total_profit
+FROM imposing-medium-489406-c1.Sales.Superstore
+GROUP BY category
+ORDER BY total_profit DESC
+
+
+
+
+
+8. Shipping Delay Analysis
+
+SELECT 
+  order_id, 
+  DATE_DIFF(ship_date, order_date, DAY) AS shipping_days 
+FROM 
+  `imposing-medium-489406-c1.Sales.Superstore` 
+  WHERE 
+  order_id IS NOT NULL
+ORDER BY 
+  shipping_days DESC
+LIMIT 10
