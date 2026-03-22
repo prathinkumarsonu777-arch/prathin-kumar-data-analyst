@@ -1,0 +1,40 @@
+1. Total Revenue
+
+SELECT SUM(Total_Amount) AS revenue
+FROM imposing-medium-489406-c1.Retail.Sales
+
+
+2. Revenue by Category
+
+SELECT Product_Category,
+SUM(Total_Amount) AS revenue
+FROM imposing-medium-489406-c1.Retail.Sales
+GROUP BY Product_Category
+ORDER BY revenue DESC
+
+
+3. Sales by Gender
+
+SELECT Gender,
+SUM(Total_Amount) AS revenue
+FROM retail_sales
+GROUP BY Gender
+
+
+4. Monthly Sales
+
+SELECT
+MONTH,
+SUM(Total_Amount) AS revenue
+FROM imposing-medium-489406-c1.Retail.Sales
+GROUP BY MONTH
+
+
+5. Top Customers
+
+SELECT Customer_ID,
+SUM(Total_Amount) AS revenue
+FROM imposing-medium-489406-c1.Retail.Sales
+GROUP BY Customer_ID
+ORDER BY revenue DESC
+LIMIT 10
