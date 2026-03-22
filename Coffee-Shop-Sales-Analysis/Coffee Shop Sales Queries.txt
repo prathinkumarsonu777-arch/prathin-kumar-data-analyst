@@ -1,0 +1,63 @@
+1. Total Sales
+
+SELECT SUM(sales) AS total_sales
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales` LIMIT 1000
+
+
+2. Total Profit
+
+SELECT SUM(profit) AS total_profit
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales`
+
+
+3. Sales by Region 
+
+SELECT region,
+SUM(sales) AS total_sales
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales`
+GROUP BY region
+ORDER BY total_sales DESC
+
+
+4. Profit by State
+
+SELECT state,
+SUM(profit) AS total_profit
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales` 
+GROUP BY state
+ORDER BY total_profit DESC
+
+
+5. Sales by Category 
+
+SELECT category,
+SUM(sales) AS total_sales
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales`
+GROUP BY category
+
+
+6. Top Product Types
+
+SELECT type,
+SUM(sales) AS total_sales
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales`
+GROUP BY type
+ORDER BY total_sales DESC
+LIMIT 10
+
+
+7. Monthly Sales Trend
+
+SELECT Month,
+SUM(sales) AS total_sales
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales` 
+GROUP BY Month
+ORDER BY total_sales
+
+
+8. Profit Margin by Category
+
+SELECT category,
+SUM(profit)/SUM(sales) AS profit_margin
+FROM `imposing-medium-489406-c1.Coffee.Shop Sales`
+GROUP BY category
